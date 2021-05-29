@@ -18,7 +18,7 @@ public class VetsResource {
 
         List<Vet> vets = new ArrayList<Vet>();
 
-        vets.add(new Vet("Focus", "Robinson Solano", "robinson21@gmail.com", "Barranquilla"));
+        vets.add(new Vet("Focus", "Robinson Solano", "robinson21@gmail.com", "Cartagena"));
 
 
         return Response.ok()
