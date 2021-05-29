@@ -19,6 +19,7 @@ public class BooksResource {
         books.add(new Book(1, "Cien años de soledad", "1234", authorId));
         books.add(new Book(2, "El coronel no tiene quien le escriba", "1234", authorId));
 
+
         return Response.ok()
                 .entity(books)
                 .build();
