@@ -1,6 +1,7 @@
-package resources.pojos;
+package resources;
 
 import resources.pojos.Vet;
+import resources.pojos.Visit;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
