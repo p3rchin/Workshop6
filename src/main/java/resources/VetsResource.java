@@ -29,10 +29,10 @@ public class VetsResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response create(Owner owner) {
+    public Response create(Vet vet) {
 
         return Response.status(Response.Status.CREATED)
-                .entity(owner)
+                .entity(vet)
                 .build();
     }
 }
