@@ -1,6 +1,5 @@
 package resources;
 
-import resources.pojos.Author;
 import resources.pojos.Owner;
 
 import javax.ws.rs.*;

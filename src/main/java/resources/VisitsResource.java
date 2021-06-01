@@ -8,16 +8,16 @@ import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
-@Path("/visits")
+@Path("/vets/{vetId}/pets/{petId}/visits")
 public class VisitsResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response list() {
+    public Response list(@PathParam("vetId") Integer vetId, @PathParam("petId") Integer petId) {
 
         List<Visit> visits = new ArrayList<Visit>();
 
-        visits.add(new Visit(1, "hola", "General", "El perro está vomitado", 2, 3));
+        visits.add(new Visit(1, "hola", "General", "El perro está vomitado", vetId, petId));
 
 
         return Response.ok()

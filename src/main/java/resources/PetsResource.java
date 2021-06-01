@@ -1,7 +1,5 @@
 package resources;
 
-import resources.pojos.Book;
-import resources.pojos.Owner;
 import resources.pojos.Pet;
 
 import javax.ws.rs.*;
