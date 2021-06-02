@@ -38,7 +38,7 @@ public class OwnerTotalResource {
             }
 
             totalOwners.add(new TotalOwners("total duenios por localidad " + neighborhood[i] + " es de " +(owners1.size()), owners1));
-            }
+        }
 
         return Response.ok()
                 .entity(totalOwners)
