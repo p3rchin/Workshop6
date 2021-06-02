@@ -24,7 +24,7 @@ public class PetsTotalResource {
         List<TotalPets> totalPets = new ArrayList<TotalPets>();
         String[] species = {"CANINO", "FELINO"};
         String[] race = {"LABRADOR", "EMPERADOR"};
-        String[] size = {"PEQUEÑO", "MEDIANO", "GRANDE", "MUY GRANDE"};
+        String[] size = {"PEQUENIO", "MEDIANO", "GRANDE", "MUY GRANDE"};
         String[] sex = {"MACHO", "HEMBRA"};
 
         pets.add(new Pet(1, 12345, "Friga", "CANINO",  "LABRADOR", "MEDIANO", "HEMBRA", "https://www.ecestaticos.com/image/clipping/557/418/79776773aab795837282c7d4947abaf7/por-que-nos-parece-que-los-perros-sonrien-una-historia-de-30-000-anos.jpg", 1));
@@ -62,6 +62,17 @@ public class PetsTotalResource {
                     }
                 }
                 totalPets.add(new TotalPets("total mascotas por tamaño " + size[i] + " es de " + (pets1.size()), pets1));
+            }
+        }
+        if (parametro.equals("sexo")) {
+            for (int i = 0; i < sex.length; i++) {
+                List<Pet> pets1 = new ArrayList<Pet>();
+                for (int j = 0; j < pets.size(); j++) {
+                    if (sex[i].equals(pets.get(j).getSex())) {
+                        pets1.add(pets.get(j));
+                    }
+                }
+                totalPets.add(new TotalPets("total mascotas por tamaño " + sex[i] + " es de " + (pets1.size()), pets1));
             }
         }
         return Response.ok()
