@@ -1,23 +1,27 @@
 package resources.pojos;
 
+import java.util.List;
+
 public class Owner {
     private String username;
     private Integer personId;
     private String name;
     private String address;
     private String neighborhood;
+    private List<Pet> pets;
 
 
     public Owner(){
 
     }
 
-    public Owner(String username, Integer personId, String name, String address, String neighborhood) {
+    public Owner(String username, Integer personId, String name, String address, String neighborhood, List<Pet> pets) {
         this.username = username;
         this.personId = personId;
         this.name = name;
         this.address = address;
         this.neighborhood = neighborhood;
+        this.pets = pets;
     }
 
     public String getUsername() {
@@ -58,5 +62,13 @@ public class Owner {
 
     public void setNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
+    }
+
+    public List<Pet> getPets() {
+        return pets;
+    }
+
+    public void setPets(List<Pet> pets) {
+        this.pets = pets;
     }
 }

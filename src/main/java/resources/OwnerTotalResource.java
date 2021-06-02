@@ -19,10 +19,11 @@ public class OwnerTotalResource {
 
         List<Owner> owners = new ArrayList<Owner>();
         List<Owner> owners1 = new ArrayList<Owner>();
+
         Integer total = 0;
-        owners.add(new Owner("perchin", 1, "Fabián Gómez", "hola2@hotmail.com", "Bogotá"));
-        owners.add(new Owner("perchin", 1, "Fabián Gómez", "hola2@hotmail.com", "Bogotá"));
-        owners.add(new Owner("perchin", 2, "Robinson Gutierrez", "hola2@hotmail.com", "USAQUEN"));
+//        owners.add(new Owner("perchin", 1, "Fabián Gómez", "hola2@hotmail.com", "Bogotá"));
+//        owners.add(new Owner("perchin", 1, "Fabián Gómez", "hola2@hotmail.com", "Bogotá"));
+//        owners.add(new Owner("perchin", 2, "Robinson Gutierrez", "hola2@hotmail.com", "USAQUEN"));
 
 
         for (int i = 0; i < owners.size(); i++) {
