@@ -1,0 +1,442 @@
+{
+	"info": {
+		"_postman_id": "16a1bfb4-ca07-45e9-afcd-1b07e754b568",
+		"name": "Workshop 6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Owners",
+			"item": [
+				{
+					"name": "Create owner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"username\": \"Robinson\",\r\n\"personId\": 1,\r\n\"name\": \"Fabián Gómez\",\r\n\"address\": \"hola2@hotmail.com\",\r\n\"neighborhood\": \"Ciudad Bolivar\",\r\n\"pets\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/WebServicesTutorial-1.0-SNAPSHOT/api/owners",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"WebServicesTutorial-1.0-SNAPSHOT",
+								"api",
+								"owners"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update owner",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"username\": \"perchin\",\r\n\"personId\": 1,\r\n\"name\": \"Robinson Gutiérrez\",\r\n\"address\": \"hola3@hotmail.com\",\r\n\"neighborhood\": \"Suba\",\r\n\"pets\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/WebServicesTutorial-1.0-SNAPSHOT/api/owners/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"WebServicesTutorial-1.0-SNAPSHOT",
+								"api",
+								"owners",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get total owners",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/WebServicesTutorial-1.0-SNAPSHOT/api/ownersTotal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"WebServicesTutorial-1.0-SNAPSHOT",
+								"api",
+								"ownersTotal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List owners",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/WebServicesTutorial-1.0-SNAPSHOT/api/owners?person_id=1&name=Fabián Gómez&neighborhood=USAQUEN",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"WebServicesTutorial-1.0-SNAPSHOT",
+								"api",
+								"owners"
+							],
+							"query": [
+								{
+									"key": "person_id",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": "Fabián Gómez"
+								},
+								{
+									"key": "neighborhood",
+									"value": "USAQUEN"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pets",
+			"item": [
+				{
+					"name": "Create pet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"petId\": 1,\r\n\"microchip\": 12346,\r\n\"name\": \"JOSEY\",\r\n\"species\": \"CANINO\",\r\n\"race\": \"PASTOR\",\r\n\"size\": \"GRANDE\",\r\n\"sex\": \"MACHO\",\r\n\"picture\": \"https://www.ecestaticos.com/image/clipping/557/418/79776773aab795837282c7d4947abaf7/por-que-nos-parece-que-los-perros-sonrien-una-historia-de-30-000-anos.jpg\",\r\n\"ownerId\": 1,\r\n\"sterilized\": \"SI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/WebServicesTutorial-1.0-SNAPSHOT/api/owners/1/pets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"WebServicesTutorial-1.0-SNAPSHOT",
+								"api",
+								"owners",
+								"1",
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update pet",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"petId\": 1,\r\n\"microchip\": 12346,\r\n\"name\": \"ROBI\",\r\n\"species\": \"CANINO\",\r\n\"race\": \"PITBULL\",\r\n\"size\": \"GRANDE\",\r\n\"sex\": \"HEMBRA\",\r\n\"picture\": \"https://www.ecestaticos.com/image/clipping/557/418/79776773aab795837282c7d4947abaf7/por-que-nos-parece-que-los-perros-sonrien-una-historia-de-30-000-anos.jpg\",\r\n\"ownerId\": 1,\r\n\"sterilized\": \"SI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/WebServicesTutorial-1.0-SNAPSHOT/api/owners/1/pets/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"WebServicesTutorial-1.0-SNAPSHOT",
+								"api",
+								"owners",
+								"1",
+								"pets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get total pets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/WebServicesTutorial-1.0-SNAPSHOT/api/pets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"WebServicesTutorial-1.0-SNAPSHOT",
+								"api",
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List pets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/WebServicesTutorial-1.0-SNAPSHOT/api/owners/1/pets?pet_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"WebServicesTutorial-1.0-SNAPSHOT",
+								"api",
+								"owners",
+								"1",
+								"pets"
+							],
+							"query": [
+								{
+									"key": "pet_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cases",
+			"item": [
+				{
+					"name": "Create case",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"caseId\": 1,\r\n        \"createdAt\": \"Created\",\r\n        \"type\": \"PERDIDA\",\r\n        \"description\": \"Es blanca con manchas negras\",\r\n        \"petId\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/WebServicesTutorial-1.0-SNAPSHOT/api/pets/1/cases",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"WebServicesTutorial-1.0-SNAPSHOT",
+								"api",
+								"pets",
+								"1",
+								"cases"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List cases",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/WebServicesTutorial-1.0-SNAPSHOT/api/cases",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"WebServicesTutorial-1.0-SNAPSHOT",
+								"api",
+								"cases"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vet",
+			"item": [
+				{
+					"name": "Create vet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"username\": \"Focus\",\r\n        \"name\": \"Robinson Solano\",\r\n        \"address\": \"robinson21@gmail.com\",\r\n        \"neighborhood\": \"Cartagena\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/WebServicesTutorial-1.0-SNAPSHOT/api/vets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"WebServicesTutorial-1.0-SNAPSHOT",
+								"api",
+								"vets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update vet",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"username\": \"Focus\",\r\n        \"name\": \"Fabián Gómez\",\r\n        \"address\": \"fab1@gmail.com\",\r\n        \"neighborhood\": \"Bogotá\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/WebServicesTutorial-1.0-SNAPSHOT/api/vets/Focus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"WebServicesTutorial-1.0-SNAPSHOT",
+								"api",
+								"vets",
+								"Focus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Visits",
+			"item": [
+				{
+					"name": "Create visit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"visitId\": 1,\r\n        \"createdAd\": \"hola\",\r\n        \"type\": \"General\",\r\n        \"description\": \"El perro está vomitado\",\r\n        \"vetId\": 1,\r\n        \"petId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/WebServicesTutorial-1.0-SNAPSHOT/api/vets/1/pets/1/visits",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"WebServicesTutorial-1.0-SNAPSHOT",
+								"api",
+								"vets",
+								"1",
+								"pets",
+								"1",
+								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List visits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/WebServicesTutorial-1.0-SNAPSHOT/api/visit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"WebServicesTutorial-1.0-SNAPSHOT",
+								"api",
+								"visit"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
