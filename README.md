@@ -1,2 +1,2 @@
 # Workshop6
-Developed by Robinson Gutiérrez y Fabián Gómez
+Tuvimos problemas con la carga de la imagen,así que obtamos para que se resiviera tipo String.
