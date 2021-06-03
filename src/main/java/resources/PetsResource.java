@@ -1,5 +1,6 @@
 package resources;
 
+import resources.pojos.Owner;
 import resources.pojos.Pet;
 
 import javax.ws.rs.*;
@@ -15,9 +16,12 @@ public class PetsResource {
     public Response list(@PathParam("ownerId") Integer ownerId, @QueryParam("pet_id") String pet_id, @QueryParam("microchip") String microchip, @QueryParam("name") String name, @QueryParam("species") String species, @QueryParam("race") String race, @QueryParam("size") String size, @QueryParam("sex") String sex) {
 
         List<Pet> pets = new ArrayList<Pet>();
+        Owner owner = new Owner("perchin", 1, "Fabián Gómez", "hola2@hotmail.com", "USAQUEN", null);
+        Owner owner1 = new Owner("Focus", 2, "Robinson Gutierrez", "hola3@hotmail.com", "SUBA", null);
+
         List<Pet> pets1 = new ArrayList<Pet>();
-        pets.add(new Pet(1, 12345, "Friga", "CANINO",  "Labrador", "MEDIANO", "HEMBRA", "https://www.ecestaticos.com/image/clipping/557/418/79776773aab795837282c7d4947abaf7/por-que-nos-parece-que-los-perros-sonrien-una-historia-de-30-000-anos.jpg", ownerId));
-        pets.add(new Pet(2, 12346, "Dingo", "FELINO",  "EMPERADOR", "PEQUENIO", "MACHO", "https://www.ecestaticos.com/image/clipping/557/418/79776773aab795837282c7d4947abaf7/por-que-nos-parece-que-los-perros-sonrien-una-historia-de-30-000-anos.jpg", ownerId));
+        pets.add(new Pet(1, 12345, "Friga", "CANINO",  "Labrador", "MEDIANO", "HEMBRA", "https://www.ecestaticos.com/image/clipping/557/418/79776773aab795837282c7d4947abaf7/por-que-nos-parece-que-los-perros-sonrien-una-historia-de-30-000-anos.jpg", ownerId, "SI", owner));
+        pets.add(new Pet(2, 12346, "Dingo", "FELINO",  "EMPERADOR", "PEQUENIO", "MACHO", "https://www.ecestaticos.com/image/clipping/557/418/79776773aab795837282c7d4947abaf7/por-que-nos-parece-que-los-perros-sonrien-una-historia-de-30-000-anos.jpg", ownerId, "NO", owner1));
 
         for (int i = 0; i < pets.size(); i++) {
             if(pet_id != null){
