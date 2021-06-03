@@ -17,7 +17,7 @@ public class VisitsResource {
 
         List<Visit> visits = new ArrayList<Visit>();
 
-        visits.add(new Visit(1, "hola", "General", "El perro está vomitado", vetId, petId));
+        visits.add(new Visit(1, "hola", "Implantacion", "El perro está vomitado", vetId, petId));
 
 
         return Response.ok()
