@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Owner {
     private String username;
-    private Integer personId;
+    private Integer person_id;
     private String name;
     private String address;
     private String neighborhood;
@@ -15,9 +15,9 @@ public class Owner {
 
     }
 
-    public Owner(String username, Integer personId, String name, String address, String neighborhood, List<Pet> pets) {
+    public Owner(String username, Integer person_id, String name, String address, String neighborhood, List<Pet> pets) {
         this.username = username;
-        this.personId = personId;
+        this.person_id = person_id;
         this.name = name;
         this.address = address;
         this.neighborhood = neighborhood;
@@ -33,11 +33,11 @@ public class Owner {
     }
 
     public Integer getPersonId() {
-        return personId;
+        return person_id;
     }
 
     public void setPersonId(Integer personId) {
-        this.personId = personId;
+        this.person_id = person_id;
     }
 
     public String getName() {

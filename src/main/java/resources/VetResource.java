@@ -16,11 +16,4 @@ public class VetResource {
                 .entity(vet)
                 .build();
     }
-
-    @DELETE
-    public Response delete(@PathParam("username") String username) {
-
-        return Response.noContent()
-                .build();
-    }
 }

@@ -18,10 +18,4 @@ public class OwnerResorce {
                 .build();
     }
 
-    @DELETE
-    public Response delete(@PathParam("id") Integer id) {
-
-        return Response.noContent()
-                .build();
-    }
 }

@@ -17,11 +17,4 @@ public class VisitResource {
                 .entity(visit)
                 .build();
     }
-
-    @DELETE
-    public Response delete(@PathParam("id") Integer id) {
-
-        return Response.noContent()
-                .build();
-    }
 }

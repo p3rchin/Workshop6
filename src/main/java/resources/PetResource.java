@@ -17,10 +17,4 @@ public class PetResource {
                 .build();
     }
 
-    @DELETE
-    public Response delete(@PathParam("ownerId") Integer ownerId, @PathParam("id") Integer id) {
-
-        return Response.noContent()
-                .build();
-    }
 }

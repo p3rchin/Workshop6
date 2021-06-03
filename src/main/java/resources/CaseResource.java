@@ -18,10 +18,4 @@ public class CaseResource {
                 .build();
     }
 
-    @DELETE
-    public Response delete(@PathParam("petId") Integer petId, @PathParam("id") Integer id) {
-
-        return Response.noContent()
-                .build();
-    }
 }

@@ -3,21 +3,18 @@ package resources;
 import resources.pojos.Owner;
 import resources.pojos.Pet;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 
-@Path("/owners/{parametro}")
+@Path("/owners")
 public class OwnersResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response list(@PathParam("parametro") String parametro) {
+    public Response list(@QueryParam("person_id") String person_id,@QueryParam("name") String name, @QueryParam("neighborhood") String neighborhood) {
 
         List<Owner> owners = new ArrayList<Owner>();
         List<Owner> owners1 = new ArrayList<Owner>();
@@ -31,18 +28,31 @@ public class OwnersResource {
 
 
         for (int i = 0; i < owners.size(); i++) {
-            if(parametro.equals(owners.get(i).getName())){
-                owners1.add(owners.get(i));
+            if(name!=null){
+                if(name.equals(owners.get(i).getName())){
+                    owners1.add(owners.get(i));
+                }
             }
-            if(parametro.equals(owners.get(i).getNeighborhood())){
-                owners1.add(owners.get(i));
+            if(neighborhood!=null){
+                if(neighborhood.equals(owners.get(i).getNeighborhood())){
+                    owners1.add(owners.get(i));
+                }
             }
-            if(parametro.equals(String.valueOf(owners.get(i).getPersonId()))){
-                owners1.add(owners.get(i));
-            }
+           if(person_id!=null){
+               if(person_id.equals(String.valueOf(owners.get(i).getPersonId()))){
+                   owners1.add(owners.get(i));
+               }
+           }
         }
         return Response.ok()
                 .entity(owners1)
                 .build();
+    }
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response create(Owner owner) {
+        owner.setPersonId(3);
+        return Response.status(Response.Status.CREATED).entity(owner).build();
     }
 }

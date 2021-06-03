@@ -24,8 +24,8 @@ public class OwnerTotalResource {
 
         String[] neighborhood = {"Antonio Nariño", "Barrios Unidos", "Bosa", "Chapinero", "Ciudad Bolivar", "Engativá", "Fontibón", "Kennedy", "La Candelaria", "Los Martires", "Puente Aranda", "Rafael Uribe Uribe", "San Cristóbal", "Santa Fe", "Suba", "Sumapaz", "Teusaquillo", "Tunjuelito", "Usaquen", "Usme"};
         Integer total = 0;
-        owners.add(new Owner("perchin", 1, "Fabián Gómez", "hola2@hotmail.com", "Bogotá", null));
-        owners.add(new Owner("perchin", 1, "Fabián Gómez", "hola2@hotmail.com", "Bogotá", null));
+        owners.add(new Owner("perchin", 1, "Fabián Gómez", "hola2@hotmail.com", "Ciudad Bolivar", null));
+        owners.add(new Owner("perchin", 1, "Fabián Gómez", "hola2@hotmail.com", "Ciudad Bolivar", null));
         owners.add(new Owner("perchin", 2, "Robinson Gutierrez", "hola2@hotmail.com", "Usaquen", null));
         owners.add(new Owner("perchin", 2, "Robinson Gutierrez", "hola2@hotmail.com", "Usaquen", null));
 

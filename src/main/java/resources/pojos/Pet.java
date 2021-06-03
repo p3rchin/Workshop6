@@ -11,6 +11,7 @@ public class Pet {
     private String sex;
     private String picture;
     private Integer ownerId;
+    private String sterilized;
 
     public Pet(){
 
@@ -26,6 +27,19 @@ public class Pet {
         this.sex = sex;
         this.picture = picture;
         this.ownerId = ownerId;
+    }
+
+    public Pet(Integer petId, Integer microchip, String name, String species, String race, String size, String sex, String picture, Integer ownerId, String sterilized) {
+        this.petId = petId;
+        this.microchip = microchip;
+        this.name = name;
+        this.species = species;
+        this.race = race;
+        this.size = size;
+        this.sex = sex;
+        this.picture = picture;
+        this.ownerId = ownerId;
+        this.sterilized = sterilized;
     }
 
     public Integer getPetId() {
@@ -98,5 +112,13 @@ public class Pet {
 
     public void setOwnerId(Integer ownerId) {
         this.ownerId = ownerId;
+    }
+
+    public String getSterilized() {
+        return sterilized;
+    }
+
+    public void setSterilized(String sterilized) {
+        this.sterilized = sterilized;
     }
 }
